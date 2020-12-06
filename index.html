@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="./style.css">
+
+    
+    <title>Jogo da Memória Cinema</title>
+</head>
+<body>
+    <div class="center">
+    <section id="abertura" class="abertura">
+        <div class="container">
+            <form id="myform">
+                <h1>Jogo da memória</h1>
+                <h2>Escolha seu tema preferido</h2>
+                <input type="radio" id="cinema" name="tema" value="cinema" required>
+                <label for="cinema"><strong>Cinema</strong></label><br>
+                <input type="radio" id="serie" name="tema" value="serie" required >
+                <label for="serie"><strong>Série tv</strong></label><br>
+                <input type="radio" id="infantil" name="tema" value="infantil" required>
+                <label for="infantil"><strong>Infantil</strong></label>
+                <br>
+                <h2>Escolha as cores das cartas</h2>
+                <input type="radio" id="vermelho" name="cores" value="vermelho" required>
+                <label for="male"><strong>Vermelho</strong></label><br>
+                <input type="radio" id="verde" name="cores" value="verde" required>
+                <label for="female"><strong>Verde</strong></label><br>
+                <input type="radio" id="azul" name="cores" value="azul" required>
+                <label for="other"><strong>Azul</strong></label><br><br>
+                <div id="mensagemerro" style="display:none;">
+                    <h4>Você deve escolher um tema e uma cor</h4>
+                </div>
+    
+                
+    
+              </form> 
+                <button onclick="validateForm()">Começar</button>
+        </div>
+    
+    </section>
+
+  <div class="container">
+  <main class="memory-game" id="memory-game" style="display:none;">
+
+        <div class="card" data-card="d1">
+            <img  id="card1" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback1">
+        </div>
+        
+        <div class="card" data-card="d2">
+            <img  id="card2" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback2">
+        </div>
+        
+        <div class="card" data-card="d3">
+            <img  id="card3" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback3">
+        </div>
+        
+        <div class="card" data-card="d4">
+            <img id="card4"src="#" alt="face da carta" class="card-front" >
+            <img src="#" alt="verso da carta" class="card-back" id="cback4">
+        </div>
+        
+        <div class="card" data-card="d5">
+            <img  id="card5" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback5">
+        </div>
+        
+        <div class="card" data-card="d6">
+            <img  id="card6" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback6">
+        </div>
+
+        <div class="card" data-card="d1">
+            <img  id="card1a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback1a">
+        </div>
+        
+        <div class="card" data-card="d2">
+            <img  id="card2a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback2a">
+        </div>
+        
+        <div class="card" data-card="d3">
+            <img  id="card3a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback3a">
+        </div>
+        
+        <div class="card" data-card="d4">
+            <img id="card4a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback4a">
+        </div>
+        
+        <div class="card" data-card="d5">
+            <img  id="card5a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback5a">
+        </div>
+        
+        <div class="card" data-card="d6">
+            <img  id="card6a" src="#" alt="face da carta" class="card-front">
+            <img src="#" alt="verso da carta" class="card-back" id="cback6a">
+        </div>
+        
+       
+    </main>
+  </div>
+
+
+ 
+    </div>
+
+
+    <link rel="stylesheet" href="./jquery-3.5.1.min.js">
+    <script src="./script.js"></script>
+</body>
+</html>
